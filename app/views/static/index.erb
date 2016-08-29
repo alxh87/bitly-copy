@@ -1,2 +1,33 @@
 <h1>Hello World</h1>
 <p>See Me in views/static/index.html.erb</p>
+
+
+<form action="/urls" method="post">
+    Enter URL: 
+    <input type="text" name="long_url">
+    <input type="submit" value="Submit">
+ </form>
+
+
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+<table style="width:50%">
+
+  <tr>
+  	<th>ID</th>
+    <th>Long URL</th>
+    <th>Short URL</th> 
+    <th>Click Count</th>
+  </tr>	
+  <tr>
+  <% Url.all.each do |x| %>
+  	<td><%= x.id %></td>
+    <td><%= x.long_url %></td>
+    <td><a href= "<%=x.short_url%>"><%= x.short_url %></a></td> 
+    <td><%= x.click_count %></td>
+  </tr>
+  <%end%>
+</table>
