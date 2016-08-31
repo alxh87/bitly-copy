@@ -11,11 +11,14 @@ a= Url.create(long_url: params[:long_url])
 	if a.save
 		redirect "/"
 	else 
-		"need http"
+		redirect '/urlerror'
 	end
 	# erb :"static/index"
 end
 
+get '/urlerror' do
+  erb :"static/urlformaterror"
+end
 
 get '/:short_url' do
 

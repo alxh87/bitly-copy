@@ -1,0 +1,83 @@
+<div class="background">
+
+  <div class="navigation">
+
+    <span class="logo"><img src="../img/bitlylogo.svg"></span>
+    <span><a href="http://google.com" class="menu">TOUR</a></span>
+    <span><a href="http://google.com" class="menu">ENTERPRISE</a></span>
+    <span><a href="http://google.com" class="menu">RESOURCES</a></span>
+    <span><a href="http://google.com"  class="menu">BLOG</a></span>
+    <span><a href="http://google.com" class="menu">ABOUT</a></span>
+    
+    <span><a href="http://news.google.com" class="login" id="signup">SIGNUP</a></span>
+    <span><a href="http://reddit.com" class="login">LOGIN</a></span>
+
+  </div>
+
+  <div class="stuff">
+    <h1 class="title">THE LINK KNOWS ALL. SO CAN YOU.</h1>
+
+    <h1 class ="a">Own your links with Bitly, the world’s leading customer experience platform.</h1>
+
+  </div>
+
+  <div class="form">
+    <form action="/urls"  method="post">
+      <input type="text" 
+      onfocus="this.value='';"
+      id="textbox" name="long_url" value="Enter URL">
+      <input type="submit" id ="button" value="SHORTEN"\>
+    </form>
+  </div>
+  <p style="color:red;">Enter URL starting with "http..."</p>
+</div>
+
+
+
+<div class="details">
+  <h2 class="title power">UNLEASH THE<br/>POWER OF THE LINK</h2>
+  <p class="subheader">Links are everywhere. Within every channel and every platform. Only Bitlinks<br/>are powerful enough to allow you to see clear across the internet.</p>
+
+  <div class="features">
+    <div class="onefeature">
+      <img src="../img/shorten.svg">
+      <h3 class="featureheading">SHORTEN</h3>
+      Shorten, brand and optimize your links across devices and channels. Share them via Bitly, API or partner integrations.
+
+    </div>
+    <div class="onefeature">
+      <img src="../img/measure.svg">
+      <h3 class="featureheading">MEASURE</h3>
+      Track individual link analytics, gather audience intelligence and measure campaign performance in one location.
+    </div>
+    <div class="onefeature">
+      <img src="../img/optimise.svg">
+      <h3 class="featureheading">OPTIMISE</h3>
+      Collect insights on your performance and optimize your marketing efforts to better fit your audience needs.
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<table id="db-list">
+
+  <tr>
+    <th>ID</th>
+    <th>Long URL</th>
+    <th>Short URL</th> 
+    <th>Click Count</th>
+  <tr>
+  <% Url.all.each do |x| %>
+    <td><%= x.id %></td>
+    <td><%= x.long_url %></td>
+    <td><a href= "<%=x.short_url%>"><%= x.short_url %></a></td> 
+    <td><%= x.click_count %></td>
+  </tr>
+  <%end%>
+</table>
+
+
+

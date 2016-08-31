@@ -1,0 +1,106 @@
+
+h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+font-family: brandon-grotesque,"Helvetica Neue",Helvetica,Arial,sans-serif;}
+
+
+#header {
+    box-shadow: none;
+    width: 100%;
+    z-index: 1000;
+    position: relative;
+    
+    padding-bottom: 120px;
+    margin-bottom: -40px;
+    background: url("http://az608707.vo.msecnd.net/files/BurchellsZebra_EN-US14692706178_1366x768.jpg") top center no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo{
+	
+	background-color: white;
+	color: blue;
+	opacity: 0.7;
+	letter-spacing: 5px;
+	font-size: 40px;
+/*	width: 300px;*/
+	height: 50px;
+	margin-top: 10;
+	text-align: center;
+	font-family: "Segoe UI",Arial,sans-serif;
+}
+
+#title{
+	padding: 10px;
+    width: 200px;
+    height: 200px;
+    text-align: right
+}
+
+.page-title{
+ font-weight: 500;
+    font-size: 26px;
+    /*color: #fff;*/
+    line-height: 28px;
+    margin-top: 50px;
+}
+
+.centre {
+	text-align: center;
+}
+
+.container {
+    border: 1px solid black;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    text-align: right;
+}
+
+
+.button {
+
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px 16px;
+    margin: -15;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: brandon-grotesque,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 36px;
+    text-transform: uppercase;
+    border-radius: 0px;
+    color: white;
+    box-shadow: 0 0 0 0px #orange;
+    text-rendering: optimizelegibility;
+    border: 0 !important;
+    background: orange;
+}
+
+
+.shorten-input {
+    width: 300px;
+    height: 48px;
+    padding: 5px 15px;
+    font-family: proxima-nova,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 200;
+    color: #7f898e;
+    line-height: 31px;
+    border-radius: 10px;
+    border-width: 0;
+    box-shadow: 0 0 0 1px #fff;  
+}
+
+#db-list{
+    table, th, td {
+   	border: 1px solid black;
+	}
+    
+    width: 50%
+}
+
