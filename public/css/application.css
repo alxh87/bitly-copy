@@ -3,7 +3,7 @@
 	/*text-align: center;*/
 	color: white;
 	padding-top: 32px;
-	padding-bottom:50px;
+	padding-bottom:32px;
 	padding-left: 44px;
 	background-size: cover;
 }
@@ -43,12 +43,25 @@ body{
 	font-family: brandon-grotesque,sans-serif;
 	font-size: 13px;
 	font-weight: 600;
+	display: inline;
 }
 
 .menu{
 	margin-right: 25px;
 	text-decoration: none;
 	color: white;
+	z-index: 1;
+	display: inline;
+}
+
+h2{
+	display: inline;
+}
+
+.reveal{
+		z-index: -1;
+		color: red;
+		top;
 }
 
 .login{
@@ -78,7 +91,7 @@ body{
 	text-align: center;
 
 
-	line-height: 46px;
+	line-height: 49px;
 	font-family: brandon-grotesque,sans-serif;
 
 	font-weight: 500;
@@ -89,29 +102,33 @@ body{
 }
 
 #button{
-	height: 46px;
+	height: 49px;
 	background: #ee6123;
 	border-radius: 0px 3px 3px 0px;
 	color: white;
 	border: 0;
-	font-size: 13px;
+	font-size: 12px;
 	margin-left: -5px;
+	padding-left: 29px;
+	padding-right: 29px;
 }
 
 #textbox{
-	height: 46px;
+	height: 49px;
 	width: 400px;
 	border: 0;
 	padding: 20px;
   font-family: proxima-nova, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 200;
   border-radius: 3px 0px 0px 3px;
 }
 
 .details{
-	padding-top: 50px;
+	padding-top: 20px;
 	text-align: center;
+/*	display:none;*/
+	height: 450px;
 }
 
 .power{
@@ -142,6 +159,7 @@ body{
   font-size: 16px;
   font-weight: 300;
   color: #a3aaae;
+  opacity: 0.5;
 }
 
 .featureheading{
@@ -149,4 +167,50 @@ body{
 	font-family: brandon-grotesque,sans-serif;
 	font-weight: 500;
 	font-size: 21px;
+}
+
+
+.pull-me {
+	display:block;
+	width: 200px;
+	height: 20px;
+	margin: auto;
+	font-family:arial,sans-serif;
+    font-size:14px;
+	color: black;
+    background: grey;
+	text-decoration:none;
+    -moz-border-bottom-left-radius:5px;
+    -moz-border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    text-align:center;
+    cursor:pointer;
+}
+
+#db-list{
+	box-sizing: border-box;
+	width: 70%;
+	display: flex;
+	margin: 0 auto;
+	border-collapse: collapse;
+	text-align: center;
+	
+	padding-bottom: 100px
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+.urlcol{
+	text-align: left;
+	padding-left: 10px;
+	word-break: break-all;
+}
+
+.titcol{
+	text-align: left;
+	padding-left: 10px;
+	word-wrap: break-word;
 }

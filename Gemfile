@@ -14,6 +14,7 @@ gem 'thin'
 gem 'activerecord'
 gem 'activesupport'
 gem 'sinatra-activerecord'
+gem 'nokogiri'
 
 # Adding Database elements
 gem 'pg'

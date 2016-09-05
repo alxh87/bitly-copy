@@ -3,7 +3,8 @@
 	<div class="navigation">
 
 		<span class="logo"><img src="../img/bitlylogo.svg"></span>
-		<span><a href="http://google.com" class="menu">TOUR</a></span>
+		<span class="menu"><p>TOUR</p>
+			<p class="reveal">hfgdsf</p></span>
 		<span><a href="http://google.com" class="menu">ENTERPRISE</a></span>
 		<span><a href="http://google.com" class="menu">RESOURCES</a></span>
 		<span><a href="http://google.com"  class="menu">BLOG</a></span>
@@ -21,17 +22,16 @@
 	</div>
 
 	<div class="form">
-		<form action="/urls"  method="post">
+		<form action="/urls"  method="post" id="urlbox">
       <input type="text" 
-	    onfocus="this.value='';"
-      id="textbox" name="long_url" value="Enter URL">
+      id="textbox" name="long_url" autofocus placeholder ="Enter URL">
       <input type="submit" id ="button" value="SHORTEN"\>
     </form>
   </div>
   <p><br></p>
 </div>
 
-
+<div class="pull-me">Further Details</div></p>
 
 <div class="details">
 	<h2 class="title power">UNLEASH THE<br/>POWER OF THE LINK</h2>
@@ -64,15 +64,19 @@
 <table id="db-list">
 
   <tr>
-  	<th>ID</th>
-    <th>Long URL</th>
-    <th>Short URL</th> 
-    <th>Click Count</th>
+  	<th width=5%>ID</th>
+  	<th width=45%>Title</th>
+    <th width=35%>Long URL</th>
+    <th width=10%>Short URL</th> 
+    <th width=5%>Click Count</th>
+  </tr>
   <tr>
   <% Url.all.each do |x| %>
+
   	<td><%= x.id %></td>
-    <td><%= x.long_url %></td>
-    <td><a href= "<%=x.short_url%>"><%= x.short_url %></a></td> 
+  	<td class='titcol'><%= x.title %></td>
+    <td class='urlcol'><%= x.long_url %></td>
+    <td class='urlcol'><a href= '<%=x.short_url%>'><%= x.short_url %></a></td> 
     <td><%= x.click_count %></td>
   </tr>
   <%end%>

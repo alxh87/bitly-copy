@@ -5,20 +5,21 @@ get '/' do
 end
 
 post '/urls' do
-
-a= Url.create(long_url: params[:long_url])
-
-	if a.save
-		redirect "/"
+	a= Url.create(long_url: params[:long_url])
+	if a.valid?
+		a.getTitle
+		# a.shorten
+		a.save
+		# redirect "/"
+		return {url: a}.to_json
 	else 
-		redirect '/urlerror'
+		{error: "please check what you say"}.to_json
+		# redirect '/'
 	end
 	# erb :"static/index"
 end
 
-get '/urlerror' do
-  erb :"static/urlformaterror"
-end
+
 
 get '/:short_url' do
 
