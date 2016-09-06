@@ -54,7 +54,7 @@ body{
 	display: inline;
 }
 
-h2{
+/*h2{
 	display: inline;
 }
 
@@ -62,7 +62,7 @@ h2{
 		z-index: -1;
 		color: red;
 		top;
-}
+}*/
 
 .login{
 	position: relative;
@@ -153,7 +153,7 @@ h2{
   display:inline-block;
   padding: 10px 20px;
   text-align: center;
-  width: 25%;
+  width: 20%;
   margin:	auto;
   font-family: proxima-nova, sans-serif;
   font-size: 16px;
@@ -169,6 +169,12 @@ h2{
 	font-size: 21px;
 }
 
+#errorcontainer{
+	display: inline-block;
+	margin: auto;
+	color: red;
+
+}
 
 .pull-me {
 	display:block;
@@ -195,7 +201,6 @@ h2{
 	margin: 0 auto;
 	border-collapse: collapse;
 	text-align: center;
-	
 	padding-bottom: 100px
 }
 

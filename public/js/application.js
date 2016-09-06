@@ -13,10 +13,11 @@ $(document).ready(function() {
 
 
 
-     $('.menu').accordion({collapsible: true, active: false});
+     // $('.menu').accordion({collapsible: true, active: false});
 
     $('#urlbox').on("submit", function(event){
     	event.preventDefault();
+    	$("#errorcontainer").html("<p><br></p>")
     	$.ajax({
     		url: "/urls",
     		method: "post", 
@@ -27,7 +28,7 @@ $(document).ready(function() {
     			// debugger;
     			console.log(response);
     			if (response.error != undefined){
-    				$("#errorcontainer").html("<h1>"+response.error+"</h1>")
+    				$("#errorcontainer").html("<p>"+response.error+"</p>")
     			}
     			if (response.url != undefined){
     				// debugger
@@ -38,7 +39,9 @@ $(document).ready(function() {
 						<td class='urlcol'><a href=" +response.url.short_url + ">"+ response.url.short_url + "</a></td>\
 						<td>" + response.url.click_count + "</td>\
 						</tr>")
+    				
     			}
+
     		}
     	});
     });

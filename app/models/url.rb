@@ -15,9 +15,6 @@ class Url < ActiveRecord::Base
 
 	def getTitle
 		self.title = Nokogiri::HTML(open(self.long_url)).title
-		if self.title==nil
-			self.title='asdfsd'
-		end
 		
 	end
 
