@@ -7,9 +7,9 @@ end
 post '/urls' do
 	a= Url.create(long_url: params[:long_url])
 	if a.valid?
-		a.getTitle
-		# a.shorten
-		a.save
+		# a.getTitle
+		# # a.shorten
+		# a.save
 		# redirect "/"
 		return {url: a}.to_json
 	else 

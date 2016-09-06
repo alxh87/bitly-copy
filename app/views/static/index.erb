@@ -64,16 +64,16 @@
 
   <tr>
   	<th width=5%>ID</th>
-  	<th width=45%>Title</th>
-    <th width=35%>Long URL</th>
-    <th width=10%>Short URL</th> 
+  	<!-- <th width=45%>Title</th> -->
+    <th width=60%>Long URL</th>
+    <th width=30%>Short URL</th> 
     <th width=5%>Click Count</th>
   </tr>
   <tr>
-  <% Url.all.each do |x| %>
+  <% Url.order(:id).each do |x| %>
 
   	<td><%= x.id %></td>
-  	<td class='titcol'><%= x.title %></td>
+  	<!-- <td class='titcol'><%= x.title %></td> -->
     <td class='urlcol'><%= x.long_url %></td>
     <td class='urlcol'><a href= '<%=x.short_url%>'><%= x.short_url %></a></td> 
     <td><%= x.click_count %></td>

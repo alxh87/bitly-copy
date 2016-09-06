@@ -34,12 +34,11 @@ $(document).ready(function() {
     				// debugger
     				$("#db-list").append("<tr>\
 						<td>" + response.url.id + "</td>\
-						<td class='titcol'>" + response.url.title + "</td>\
 						<td class='urlcol'>" + response.url.long_url +"</td>\
 						<td class='urlcol'><a href=" +response.url.short_url + ">"+ response.url.short_url + "</a></td>\
 						<td>" + response.url.click_count + "</td>\
 						</tr>")
-    				
+
     			}
 
     		}
