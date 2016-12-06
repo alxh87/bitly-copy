@@ -13,7 +13,7 @@ post '/urls' do
 		# redirect "/"
 		return {url: a}.to_json
 	else 
-		{error: "please check what you say"}.to_json
+		{error: "Enter URL starting with 'http...'"}.to_json
 		# redirect '/'
 	end
 	# erb :"static/index"
